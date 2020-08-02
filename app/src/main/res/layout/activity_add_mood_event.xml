@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMoodEventActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <ImageButton
+            android:id="@+id/cancel_add_mood_event_button"
+            android:paddingTop="35dp"
+            android:paddingLeft="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cancel"
+            android:background="@android:color/transparent">
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="22dp"
+            android:paddingBottom="22dp"
+            android:text="@string/add_String"
+            android:textColor="@color/colorBrown"
+            android:textSize="27sp">
+        </TextView>
+    </LinearLayout>
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        android:fadingEdge="vertical">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--mood-->
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="25dp"
+                    android:layout_toLeftOf="@+id/mood_string"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/mood">
+                </ImageView>
+
+
+                <TextView
+                    android:id="@+id/mood_string"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="20dp"
+                    android:textSize="20sp"
+                    android:layout_toLeftOf="@+id/txtHide"
+                    android:text="@string/myMood">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtHide"
+                    android:layout_width="20dp"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true" />
+
+                <Spinner
+                    android:id="@+id/add_mood_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/txtHide">
+                </Spinner>
+
+            </RelativeLayout>
+
+            <!--date-->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="3px"
+                android:background="@color/colorGray"  />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <ImageView
+                    android:id="@+id/dateicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/date"
+                    >
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/add_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/dateicon"
+                    android:textSize="20sp"
+                    android:text="@string/chooseDate">
+                </TextView>
+
+
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:background="@android:color/transparent">
+                </TextView>
+
+            </RelativeLayout>
+
+
+
+            <!--time-->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="3px"
+                android:background="@color/colorGray"  />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <ImageView
+                    android:id="@+id/timeicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/time"
+                    >
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/add_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/timeicon"
+                    android:textSize="20sp"
+                    android:text="@string/chooseTime">
+                </TextView>
+
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:background="@android:color/transparent">
+                </TextView>
+
+            </RelativeLayout>
+
+
+            <!--social-->
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="3px"
+                android:background="@color/colorGray"  />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/social">
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="@string/chooseScocial">
+                </TextView>
+
+
+                <Spinner
+                    android:id="@+id/add_social_situation_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/SocialSituation">
+                </Spinner>
+
+            </LinearLayout>
+
+
+            <!--location-->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="3px"
+                android:background="@color/colorGray"  />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <fragment
+                    android:id="@+id/add_location_autoComplete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_marginRight="20dp"
+                    android:hint="@string/chooseLocation"
+                    android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment">
+                </fragment>
+
+            </LinearLayout>
+
+            <!--reason-->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="3px"
+                android:background="@color/colorGray"  />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="20dp"
+                android:paddingRight="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/text"
+                    >
+                </ImageView>
+
+                <EditText
+                    android:id="@+id/add_textual_reason_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="3dp"
+                    android:textSize="20sp"
+                    android:background="@null"
+                    android:hint="What happened?"
+                    android:textColor="@color/colorDarkGray">
+                </EditText>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="3px"
+                android:background="@color/colorGray"  />
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <ImageView
+                    android:id="@+id/imageicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/image"
+                    >
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/imageicon"
+                    android:textSize="20sp"
+                    android:text="@string/uploadPhoto">
+                </TextView>
+
+                <ImageButton
+                    android:id="@+id/add_photo_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/add_photo_album"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/camera"
+                    android:background="@android:color/transparent">
+                </ImageButton>
+
+
+                <ImageButton
+                    android:id="@+id/add_photo_album"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/album"
+                    android:background="@android:color/transparent">
+                </ImageButton>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_gravity = "center"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:scaleType="fitStart">
+                <ImageView
+                    android:id="@+id/add_image_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </ImageView>
+                <ProgressBar
+                    android:id="@+id/add_downloading_progress"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerInParent="true"
+                    android:visibility="invisible">
+                </ProgressBar>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/add_mood_event_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorPink"
+            android:text="@string/addDiary"
+            android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
+
+</LinearLayout>
+

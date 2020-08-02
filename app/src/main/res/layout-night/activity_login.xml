@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/bgtest"
+        android:scaleType = "centerCrop"
+        />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/welcomeback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="56dp"
+            android:paddingLeft="36dp"
+            android:text="@string/login_String"
+            android:textColor="@color/colorBrown"
+            android:textSize="30sp">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/welcomeback"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="10dp"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingTop="36dp"
+                android:text="@string/username"
+                android:textSize="20sp"
+                android:textColor="@color/colorBrown">
+            </TextView>
+
+            <EditText
+                android:id="@+id/login_username_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/colorBrown"
+                android:theme="@style/EditTextStyle">
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingTop="8dp"
+                android:text="@string/password"
+                android:textSize="20sp"
+                android:textColor="@color/colorBrown">
+            </TextView>
+
+            <EditText
+                android:id="@+id/login_password_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:inputType="textPassword"
+                android:textColor="@color/colorBrown"
+                android:theme="@style/EditTextStyle">
+            </EditText>
+
+            <Button
+                android:id="@+id/login_login_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:background="@color/colorDarkPink"
+                android:text="@string/login"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:paddingLeft="56dp"
+                android:text="@string/noAccount"
+                android:textColor="@color/colorDarkGray">
+            </TextView>
+
+            <Button
+                android:id="@+id/login_signup_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/signup"
+                android:textSize="20sp"
+                android:textColor="@color/colorLightPurple"
+                android:textAllCaps="false"
+                android:background="@android:color/transparent">
+
+            </Button>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</FrameLayout>
+
+
+
